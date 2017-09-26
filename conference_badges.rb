@@ -10,3 +10,17 @@ def batch_badge_creator(attendees)
   attendees.map{|el| output << badge_maker(el)}
   output
 end
+
+def assign_rooms(attendees)
+  batch_badge_creator(attendees)
+  rooms = []
+  room_num = 1
+
+  attendees.each do |attendee|
+    rooms << "Hello, #{attendee}! You'll be assigned to room #{room_num}!"
+    room_num += 1
+  end
+  return rooms
+
+
+end
