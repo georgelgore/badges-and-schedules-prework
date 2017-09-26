@@ -8,7 +8,7 @@ end
 def batch_badge_creator(attendees)
   output = []
   attendees.map{|el| output << badge_maker(el)}
-  output
+  puts output
 end
 
 def assign_rooms(attendees)
@@ -20,7 +20,7 @@ def assign_rooms(attendees)
     rooms << "Hello, #{attendee}! You'll be assigned to room #{room_num}!"
     room_num += 1
   end
-  return rooms
+  puts rooms
 
 end
 
